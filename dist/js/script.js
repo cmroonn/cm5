@@ -132,8 +132,32 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons5 = document.querySelectorAll(".open-corpclient-popup");
+    var _buttons5 = document.querySelectorAll(".open-credit-popup");
     _buttons5.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openPopup('popupCredit');
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var btn = document.getElementById("scroll-to-tarif");
+    btn.addEventListener("click", function () {
+      document.querySelector(".tarif").scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth"
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _buttons6 = document.querySelectorAll(".open-corpclient-popup");
+    _buttons6.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -166,8 +190,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   try {
-    var _buttons6 = document.querySelectorAll(".open-timer-popup");
-    _buttons6.forEach(function (btn) {
+    var _buttons7 = document.querySelectorAll(".open-timer-popup");
+    _buttons7.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -262,7 +286,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   try {
-    var swiper = new Swiper('.teachers .swiper', {
+    var swiper = new Swiper('.teachers__swiper', {
       speed: 400,
       spaceBetween: 20,
       slidesPerView: 1,
@@ -272,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       pagination: false,
       breakpoints: {
-        500: {
+        501: {
           slidesPerView: 3
         },
         pagination: {
@@ -285,11 +309,11 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _swiper = new Swiper('.reviews .swiper', {
+    var _swiper = new Swiper('.reviews__swiper', {
       slidesPerView: 1,
       slidesPerGroup: 1,
       breakpoints: {
-        500: {
+        501: {
           slidesPerView: 3
         }
       }
@@ -298,23 +322,36 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var btn = document.getElementById('instrument-btn');
+    var _btn = document.getElementById('instrument-btn');
     var block = document.getElementById('instrument-more-content');
-    btn.addEventListener("click", function () {
+    _btn.addEventListener("click", function () {
       block.classList.add("active");
-      btn.style.display = 'none';
+      _btn.style.display = 'none';
     });
   } catch (e) {
     console.log(e);
   }
   try {
-    var _btn = document.querySelector(".program__show-btn");
+    var _btn2 = document.querySelector(".program__show-btn");
     var hiddens = document.querySelectorAll(".program__module-hidden");
-    _btn.addEventListener("click", function () {
+    _btn2.addEventListener("click", function () {
       hiddens.forEach(function (elem) {
         elem.classList.add('active');
+        document.querySelector(".scroll-to-tarif").classList.add("active");
       });
-      _btn.style.display = 'none';
+      _btn2.style.display = 'none';
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _btn3 = document.querySelector(".welcome__offer__guide__btn-2");
+    _btn3.addEventListener("click", function () {
+      document.querySelector('.program').scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth"
+      });
     });
   } catch (e) {
     console.log(e);
@@ -364,20 +401,55 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons7 = document.querySelectorAll(".faq__buttons button");
-    var elems = document.querySelectorAll(".faq__text p");
-    _buttons7.forEach(function (btn) {
+    var _buttons8 = document.querySelectorAll(".faq__buttons button");
+    if (window.innerWidth > 500) {
+      var elems = document.querySelectorAll(".faq__text p");
+      _buttons8.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          _buttons8.forEach(function (btn2) {
+            return btn2.classList.remove('active');
+          });
+          elems.forEach(function (el) {
+            el.classList.remove('active');
+            if (btn.dataset.id === el.dataset.id) {
+              el.classList.add('active');
+              btn.classList.add('active');
+            }
+          });
+        });
+      });
+    } else {
+      var _elems = document.querySelectorAll(".faq__buttons__text");
+      _elems.forEach(function (el) {
+        el.dataset.height = el.offsetHeight;
+        el.style.height = '0px';
+        el.style.padding = '0px';
+      });
+      _buttons8.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          _buttons8.forEach(function (btn2) {
+            return btn2.classList.remove('active');
+          });
+          _elems.forEach(function (el) {
+            el.style.height = '0px';
+            el.classList.remove('active');
+            if (btn.dataset.id === el.dataset.id) {
+              el.style.height = el.dataset.height + 'px';
+              el.classList.add('active');
+              btn.classList.add('active');
+            }
+          });
+        });
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _buttons9 = document.querySelectorAll(".reviews__btn");
+    _buttons9.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        _buttons7.forEach(function (btn2) {
-          return btn2.classList.remove('active');
-        });
-        elems.forEach(function (el) {
-          el.classList.remove('active');
-          if (btn.dataset.id === el.dataset.id) {
-            el.classList.add('active');
-            btn.classList.add('active');
-          }
-        });
+        openPopup("popupReview-".concat(btn.dataset.id));
       });
     });
   } catch (e) {
