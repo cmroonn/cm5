@@ -294,14 +294,13 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: '.swiper-button-next-1',
         prevEl: '.swiper-button-prev-1'
       },
-      pagination: false,
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets'
+      },
       breakpoints: {
         501: {
           slidesPerView: 3
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'bullets'
         }
       }
     });
@@ -374,6 +373,13 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
+      dot.addEventListener("click", function (e) {
+        document.querySelector(".structure").scrollIntoView({
+          block: "start",
+          inline: "nearest",
+          behavior: "smooth"
+        });
+      });
     });
   } catch (e) {
     console.log(e);
@@ -394,6 +400,13 @@ document.addEventListener("DOMContentLoaded", function () {
           if (dot.dataset.dot === plate.dataset.dot) {
             plate.classList.remove("active");
           }
+        });
+      });
+      dot.addEventListener("click", function (e) {
+        document.querySelector(".structure").scrollIntoView({
+          block: "start",
+          inline: "nearest",
+          behavior: "smooth"
         });
       });
     });
@@ -450,6 +463,29 @@ document.addEventListener("DOMContentLoaded", function () {
     _buttons9.forEach(function (btn) {
       btn.addEventListener("click", function () {
         openPopup("popupReview-".concat(btn.dataset.id));
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    document.getElementById("toPrivateClub").addEventListener("click", function () {
+      document.querySelector(".promo").scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth"
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _btn4 = document.querySelector(".members__btn");
+    _btn4.addEventListener("click", function () {
+      document.querySelector(".start").scrollIntoView({
+        block: "start",
+        inline: "nearest",
+        behavior: "smooth"
       });
     });
   } catch (e) {
