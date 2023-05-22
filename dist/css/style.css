@@ -340,7 +340,6 @@ a.basic-btn {
 .welcome {
   max-width: 90vw;
   margin: auto;
-  background-image: url("../images/welcome-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 50vw;
@@ -353,17 +352,30 @@ a.basic-btn {
   border-bottom-right-radius: 2.5vw;
   overflow: hidden;
 }
+.welcome .welcome__bg-mob {
+  display: none;
+}
 @media (max-width: 500px) {
   .welcome {
     max-width: unset;
     min-height: 300vw;
-    background-image: url("../images/bg-mob.png");
     background-size: cover;
     background-position-x: center;
     border-radius: 0;
   }
   .welcome.welcome-3 {
     min-height: 273.8888888889vw;
+  }
+  .welcome .welcome__bg {
+    display: none;
+  }
+  .welcome .welcome__bg-mob {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -1079,6 +1091,14 @@ a.basic-btn {
     opacity: 1;
   }
 }
+.welcome__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .course-content {
   margin-top: 8.125vw;
 }
