@@ -1,8 +1,7 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function () {
-  // const popupTimeout = setTimeout(openPopup, 30000, 'popupTimer');
-
+  var popupTimeout = setTimeout(openPopup, 300000, 'popupTimer');
   var isOpenPopup = false;
   var main = document.getElementById('main');
   // main.addEventListener('click', function(e) {
@@ -96,8 +95,32 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons2 = document.querySelectorAll(".open-tarifst-popup");
+    var _buttons2 = document.querySelectorAll(".open-signupclub-popup");
     _buttons2.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openPopup('popupSignupClub');
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _buttons3 = document.querySelectorAll(".open-date-popup");
+    _buttons3.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        openPopup('popupDate');
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _buttons4 = document.querySelectorAll(".open-tarifst-popup");
+    _buttons4.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -108,8 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons3 = document.querySelectorAll(".open-tarifpro-popup");
-    _buttons3.forEach(function (btn) {
+    var _buttons5 = document.querySelectorAll(".open-tarifpro-popup");
+    _buttons5.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -120,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons4 = document.querySelectorAll(".open-tarifpremium-popup");
-    _buttons4.forEach(function (btn) {
+    var _buttons6 = document.querySelectorAll(".open-tarifpremium-popup");
+    _buttons6.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -132,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons5 = document.querySelectorAll(".open-credit-popup");
-    _buttons5.forEach(function (btn) {
+    var _buttons7 = document.querySelectorAll(".open-credit-popup");
+    _buttons7.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -156,8 +179,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons6 = document.querySelectorAll(".open-corpclient-popup");
-    _buttons6.forEach(function (btn) {
+    var _buttons8 = document.querySelectorAll(".open-corpclient-popup");
+    _buttons8.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -190,8 +213,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   try {
-    var _buttons7 = document.querySelectorAll(".open-timer-popup");
-    _buttons7.forEach(function (btn) {
+    var _buttons9 = document.querySelectorAll(".open-timer-popup");
+    _buttons9.forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -414,12 +437,12 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons8 = document.querySelectorAll(".faq__buttons button");
+    var _buttons10 = document.querySelectorAll(".faq__buttons button");
     if (window.innerWidth > 500) {
       var elems = document.querySelectorAll(".faq__text p");
-      _buttons8.forEach(function (btn) {
+      _buttons10.forEach(function (btn) {
         btn.addEventListener("click", function () {
-          _buttons8.forEach(function (btn2) {
+          _buttons10.forEach(function (btn2) {
             return btn2.classList.remove('active');
           });
           elems.forEach(function (el) {
@@ -438,9 +461,9 @@ document.addEventListener("DOMContentLoaded", function () {
         el.style.height = '0px';
         el.style.padding = '0px';
       });
-      _buttons8.forEach(function (btn) {
+      _buttons10.forEach(function (btn) {
         btn.addEventListener("click", function () {
-          _buttons8.forEach(function (btn2) {
+          _buttons10.forEach(function (btn2) {
             return btn2.classList.remove('active');
           });
           _elems.forEach(function (el) {
@@ -459,8 +482,8 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _buttons9 = document.querySelectorAll(".reviews__btn");
-    _buttons9.forEach(function (btn) {
+    var _buttons11 = document.querySelectorAll(".reviews__btn");
+    _buttons11.forEach(function (btn) {
       btn.addEventListener("click", function () {
         openPopup("popupReview-".concat(btn.dataset.id));
       });

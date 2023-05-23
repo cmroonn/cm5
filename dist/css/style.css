@@ -204,7 +204,8 @@ a.basic-btn {
 
 .open-basic-popup,
 .open-credit-popup,
-.open-signup-popup {
+.open-signup-popup,
+.open-signupclub-popup {
   cursor: pointer;
 }
 
@@ -340,6 +341,7 @@ a.basic-btn {
 .welcome {
   max-width: 90vw;
   margin: auto;
+  background-image: url("../images/welcome-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 50vw;
@@ -352,6 +354,9 @@ a.basic-btn {
   border-bottom-right-radius: 2.5vw;
   overflow: hidden;
 }
+.welcome.welcome-4 {
+  background-image: none;
+}
 .welcome .welcome__bg-mob {
   display: none;
 }
@@ -359,12 +364,16 @@ a.basic-btn {
   .welcome {
     max-width: unset;
     min-height: 300vw;
+    background-image: url("../images/bg-mob.png");
     background-size: cover;
     background-position-x: center;
     border-radius: 0;
   }
   .welcome.welcome-3 {
     min-height: 273.8888888889vw;
+  }
+  .welcome.welcome-4 {
+    background-image: none;
   }
   .welcome .welcome__bg {
     display: none;
@@ -2188,9 +2197,9 @@ a.basic-btn {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
-  top: 50%;
-  transform: translate(0, -50%);
-  left: 0;
+  top: 0;
+  transform: translate(-50%, 0);
+  left: 50%;
 }
 @media (max-width: 500px) {
   .services-2__content div span {
@@ -2818,6 +2827,19 @@ a.basic-btn {
 .graphic-dot-1,
 .graphic-dot-2 {
   cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .graphic-dot-1 {
+    r: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .graphic-dot-2 {
+    ry: 8;
+    rx: 8;
+  }
 }
 
 .demand__subtitle-3 {
@@ -4495,7 +4517,7 @@ a.basic-btn {
 }
 .structure__benefits__desc b {
   color: rgb(0, 97, 244);
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
   transition: 0.2s ease;
 }
 .structure__benefits__desc b:hover {
@@ -4829,7 +4851,7 @@ a.basic-btn {
 .instrument__content-2.active {
   display: flex;
   height: 20.625vw;
-  transition: height 0.2s ease, opacity 1.2s ease-in;
+  transition: height 1s ease, opacity 1.8s ease-in;
   opacity: 1;
 }
 @media (max-width: 500px) {
@@ -5134,6 +5156,7 @@ a.basic-btn {
   align-items: center;
   justify-content: center;
   margin-top: -3.125vw;
+  margin-left: 1.0625vw;
 }
 .program__link span {
   text-decoration: underline;
@@ -5156,11 +5179,11 @@ a.basic-btn {
 
 .program__show-btn {
   display: block;
-  margin: 0 auto 4.1875vw;
+  margin: 1.25vw auto 4.1875vw;
 }
 @media (max-width: 500px) {
   .program__show-btn {
-    margin: 0 auto 4.7222222222vw;
+    margin: 2.7777777778vw auto 4.7222222222vw;
   }
 }
 
@@ -5170,6 +5193,11 @@ a.basic-btn {
 }
 .scroll-to-tarif.active {
   display: block;
+}
+@media (max-width: 500px) {
+  .scroll-to-tarif {
+    margin-top: 2.7777777778vw;
+  }
 }
 
 .lessons-records__content {
@@ -5346,6 +5374,7 @@ a.basic-btn {
 
 .teachers .swiper-pagination {
   bottom: 0;
+  z-index: 3;
 }
 .teachers .swiper-pagination .swiper-pagination-bullet {
   border: 1px solid #B9D5FD;
@@ -5405,6 +5434,7 @@ a.basic-btn {
   padding: 0 0 0 1.875vw;
   margin-bottom: 0.625vw;
   color: #252D4D;
+  transition: 0.45s ease-out;
 }
 .faq__buttons button:last-child {
   margin-bottom: 0;
@@ -5415,6 +5445,7 @@ a.basic-btn {
 .faq__buttons button.active {
   background-color: #0061F4;
   color: #fff;
+  transition: 0.5s ease;
 }
 @media (max-width: 500px) {
   .faq__buttons {
@@ -6062,6 +6093,8 @@ a.basic-btn {
   border-radius: 1.25vw;
   padding: 2.25vw 2.4375vw 1.9375vw;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 500px) {
   .cases__item {
@@ -6077,6 +6110,7 @@ a.basic-btn {
   display: block;
   flex-shrink: 0;
   margin-left: 0.5625vw;
+  border-radius: 50%;
 }
 @media (max-width: 500px) {
   .cases__item__head__avatar {
@@ -6091,6 +6125,7 @@ a.basic-btn {
 
 .cases__item__body {
   font-size: 1vw;
+  margin-bottom: 1.25vw;
 }
 .cases__item__body p {
   font-weight: 700;
@@ -6145,7 +6180,7 @@ a.basic-btn {
 
 .cases__btn {
   display: block;
-  margin: 1.8125vw auto 0;
+  margin: auto auto 0;
 }
 @media (max-width: 500px) {
   .cases__btn {
@@ -6246,6 +6281,7 @@ a.basic-btn {
   font-size: 1.5vw;
   font-weight: 700;
   margin-bottom: 0.625vw;
+  padding-left: 1.125vw;
 }
 .tarif__name span {
   font-size: 1vw;
@@ -6267,6 +6303,7 @@ a.basic-btn {
   font-size: 1vw;
   font-weight: 700;
   color: #0061F4;
+  padding-left: 1.125vw;
 }
 .tarif__srok span {
   font-weight: 400;
@@ -6280,6 +6317,7 @@ a.basic-btn {
 
 .tarif__list {
   margin-top: 3.5vw;
+  padding-left: 0.625vw;
 }
 .tarif__list li {
   margin-bottom: 0.625vw;
@@ -7702,4 +7740,95 @@ a.basic-btn {
 .popup-review__warning {
   font-style: italic;
   color: rgb(143, 160, 189);
+}
+
+.popup-timer-4 {
+  height: 51.875vw;
+  width: 64.125vw;
+}
+.popup-timer-4 .popup-timer__info {
+  text-align: left;
+  margin-left: 0;
+}
+.popup-timer-4 .popup-timer__title {
+  text-align: left;
+  font-size: 1.625vw;
+  line-height: 120%;
+}
+.popup-timer-4 .popup-timer__list {
+  text-align: left;
+  margin-top: 1.25vw;
+  margin-bottom: 1.9375vw;
+  line-height: 140%;
+}
+.popup-timer-4 .popup-timer__list li {
+  display: flex;
+}
+.popup-timer-4 .popup-timer__form {
+  max-width: 29.0625vw;
+  margin-left: 30.625vw;
+}
+.popup-timer-4 .popup-timer__form__fields {
+  max-width: 22.5vw;
+}
+.popup-timer-4 .popup-timer__form__fields .field {
+  width: 100%;
+}
+.popup-timer-4 .popup-timer__form__fields .popup-timer__form__fields__submit {
+  width: 100%;
+}
+.popup-timer-4 h4 {
+  max-width: 22.5vw;
+  font-size: 1vw;
+  margin-top: 0;
+}
+@media (max-width: 500px) {
+  .popup-timer-4 {
+    width: 94.4444444444vw;
+    height: auto;
+    padding: 8.3333333333vw 6.9444444444vw;
+  }
+  .popup-timer-4 .popup-timer__form {
+    max-width: unset;
+    margin-left: 0;
+  }
+  .popup-timer-4 .popup-timer__info {
+    text-align: center;
+    font-size: 4.4444444444vw;
+    padding-left: 4.1666666667vw;
+    padding-right: 4.1666666667vw;
+    box-sizing: border-box;
+    max-width: 63.8888888889vw;
+    margin-left: auto;
+    padding-top: 2.7777777778vw;
+    padding-bottom: 2.7777777778vw;
+  }
+  .popup-timer-4 .popup-timer__title {
+    font-size: 4.4444444444vw;
+    max-width: unset;
+    margin-top: 2.7777777778vw;
+  }
+  .popup-timer-4 .popup-timer__list {
+    font-size: 3.8888888889vw;
+    margin-bottom: 6.9444444444vw;
+  }
+  .popup-timer-4 h4 {
+    font-size: 4.4444444444vw;
+    max-width: unset;
+  }
+  .popup-timer-4 .popup-timer__form__fields {
+    max-width: unset;
+  }
+}
+
+.popup-timer__pic-4 {
+  width: 25.9375vw;
+  height: 46.875vw;
+  bottom: unset;
+  top: 2.5vw;
+  left: 2.5vw;
+}
+
+.popup-timer__list {
+  font-size: 1vw;
 }
