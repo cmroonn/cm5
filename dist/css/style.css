@@ -373,6 +373,9 @@ a.basic-btn {
   .welcome.welcome-3 {
     min-height: 273.8888888889vw;
   }
+  .welcome.welcome-4 {
+    background-image: url("../images/bg-mob.png");
+  }
   .welcome .welcome__bg {
     display: none;
   }
