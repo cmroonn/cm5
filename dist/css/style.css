@@ -27,7 +27,8 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -385,6 +386,8 @@ a.basic-btn {
     left: 0;
     bottom: 0;
     right: 0;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1445,7 +1448,7 @@ a.basic-btn {
 @media (max-width: 500px) {
   .book__content__get__policy {
     font-size: 2.7777777778vw;
-    line-height: 2.7777777778vw;
+    line-height: 3.3333333333vw;
   }
 }
 
@@ -2206,6 +2209,17 @@ a.basic-btn {
     font-size: 3.3333333333vw;
     padding: 1.3888888889vw 2.7777777778vw;
     max-width: 55.5555555556vw;
+  }
+}
+@media (max-width: 500px) {
+  .services-2__content div:nth-child(5) span, .services-2__content div:nth-child(10) span, .services-2__content div:nth-child(15) span, .services-2__content div:nth-child(20) span, .services-2__content div:nth-child(25) span, .services-2__content div:nth-child(30) span, .services-2__content div:nth-child(35) span, .services-2__content div:nth-child(40) span, .services-2__content div:nth-child(45) span {
+    left: unset;
+    transform: unset;
+    right: 0;
+  }
+  .services-2__content div:first-child span, .services-2__content div:nth-child(6) span, .services-2__content div:nth-child(11) span, .services-2__content div:nth-child(16) span, .services-2__content div:nth-child(21) span, .services-2__content div:nth-child(26) span, .services-2__content div:nth-child(31) span, .services-2__content div:nth-child(36) span, .services-2__content div:nth-child(41) span, .services-2__content div:nth-child(46) span {
+    left: 0;
+    transform: unset;
   }
 }
 .services-2__content div:hover span {
@@ -4359,7 +4373,7 @@ a.basic-btn {
   .structure__item {
     padding-top: 11.1111111111vw;
     padding-left: 6.9444444444vw;
-    padding-right: 6.9444444444vw;
+    padding-right: 4.1666666667vw;
     border-radius: 5.5555555556vw;
     margin-bottom: 11.1111111111vw;
     height: unset;
@@ -4433,6 +4447,8 @@ a.basic-btn {
     width: 100%;
     top: unset;
     height: auto;
+    right: -0.2777777778vw;
+    bottom: -1.1111111111vw;
   }
 }
 
@@ -4545,7 +4561,7 @@ a.basic-btn {
   .structure__benefits__desc:before {
     width: 5.5555555556vw;
     height: 0.2777777778vw;
-    margin-top: 2.7777777778vw;
+    margin-top: 3.8888888889vw;
     margin-right: 5.5555555556vw;
   }
 }
@@ -5001,6 +5017,16 @@ a.basic-btn {
   .diplomas__row__pic-1 {
     width: 100%;
     height: auto;
+  }
+}
+
+.diplomas-access .get-access__heading {
+  max-width: 138.8888888889vw;
+}
+@media (max-width: 500px) {
+  .diplomas-access .get-access__heading {
+    max-width: 68vw;
+    line-height: 120%;
   }
 }
 
@@ -5648,6 +5674,12 @@ a.basic-btn {
   width: 100%;
   margin: 3.125vw 0 2.5vw;
 }
+@media (max-width: 500px) {
+  .edu-cost__pic {
+    padding: 0 2.7777777778vw;
+    box-sizing: border-box;
+  }
+}
 
 .edu-cost {
   margin-top: 9.375vw;
@@ -5675,6 +5707,7 @@ a.basic-btn {
   .edu-cost .get-access__heading {
     font-size: 4.4444444444vw;
     padding: 0 2.7777777778vw;
+    text-align: center;
   }
   .edu-cost .get-access__heading span {
     display: block;
@@ -5699,7 +5732,7 @@ a.basic-btn {
 @media (max-width: 500px) {
   .first-project__title {
     text-align: center;
-    max-width: 80.5555555556vw;
+    max-width: 86.1111111111vw;
     margin: 0 auto 8.8888888889vw;
   }
 }
@@ -5728,7 +5761,7 @@ a.basic-btn {
   .first-project__item img {
     width: 13.8888888889vw;
     height: 13.8888888889vw;
-    margin-right: 5.5555555556vw;
+    margin-right: 5.2777777778vw;
     border-radius: 2.7777777778vw;
   }
 }
@@ -5786,6 +5819,12 @@ a.basic-btn {
 @media (max-width: 500px) {
   .first-project {
     margin: 27.7777777778vw 0;
+  }
+  .first-project p {
+    margin-bottom: 3.6111111111vw;
+  }
+  .first-project p:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -5890,6 +5929,12 @@ a.basic-btn {
 .community__title {
   margin-bottom: 4.375vw;
 }
+@media (max-width: 500px) {
+  .community__title {
+    margin-bottom: 12.5vw;
+    margin-top: 27.7777777778vw;
+  }
+}
 
 .community__items {
   display: flex;
@@ -5936,6 +5981,7 @@ a.basic-btn {
 @media (max-width: 500px) {
   .members {
     padding-top: 16.6666666667vw;
+    margin-bottom: 27.7777777778vw;
   }
 }
 
@@ -6295,6 +6341,7 @@ a.basic-btn {
   .tarif__name {
     font-size: 6.6666666667vw;
     margin-bottom: 1.3888888889vw;
+    padding-left: 5vw;
   }
   .tarif__name span {
     font-size: 4.4444444444vw;
@@ -6314,6 +6361,7 @@ a.basic-btn {
 @media (max-width: 500px) {
   .tarif__srok {
     font-size: 4.4444444444vw;
+    padding-left: 5vw;
   }
 }
 
@@ -6346,7 +6394,8 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .tarif__list {
-    margin-top: 15.5555555556vw;
+    margin-top: 14.1666666667vw;
+    padding-left: 2.7777777778vw;
   }
   .tarif__list li {
     font-size: 4.4444444444vw;
@@ -6379,7 +6428,7 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .tarif__price {
-    font-size: 8.3333333333vw;
+    font-size: 8.8888888889vw;
   }
 }
 
@@ -6501,6 +6550,9 @@ a.basic-btn {
   .tarif__employees {
     font-size: 4.4444444444vw;
     margin-top: 6.9444444444vw;
+  }
+  .tarif__employees span {
+    display: block;
   }
 }
 
@@ -6927,6 +6979,7 @@ a.basic-btn {
 @media (max-width: 500px) {
   .rating__title {
     max-width: unset;
+    margin-bottom: 13.3333333333vw;
   }
 }
 
@@ -7281,6 +7334,12 @@ a.basic-btn {
   .questions {
     width: 100%;
     border-radius: 0;
+    margin-bottom: 0;
+  }
+  .questions .field,
+  .questions .basic-btn {
+    width: 83.3333333333vw;
+    height: 19.4444444444vw;
   }
 }
 

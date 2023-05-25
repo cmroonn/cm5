@@ -1,6 +1,16 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", function () {
+  try {
+    if (window.innerWidth <= 500) {
+      var elems = document.querySelectorAll(".marquee .open-basic-popup");
+      elems.forEach(function (el) {
+        el.classList.remove('open-basic-popup');
+      });
+    }
+  } catch (e) {
+    console.log(e);
+  }
   var popupTimeout = setTimeout(openPopup, 300000, 'popupTimer');
   var isOpenPopup = false;
   var main = document.getElementById('main');
@@ -396,13 +406,15 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-      dot.addEventListener("click", function (e) {
-        document.querySelector(".structure").scrollIntoView({
-          block: "start",
-          inline: "nearest",
-          behavior: "smooth"
+      if (window.innerWidth >= 500) {
+        dot.addEventListener("click", function (e) {
+          document.querySelector(".structure").scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth"
+          });
         });
-      });
+      }
     });
   } catch (e) {
     console.log(e);
@@ -425,13 +437,15 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       });
-      dot.addEventListener("click", function (e) {
-        document.querySelector(".structure").scrollIntoView({
-          block: "start",
-          inline: "nearest",
-          behavior: "smooth"
+      if (window.innerWidth >= 500) {
+        dot.addEventListener("click", function (e) {
+          document.querySelector(".structure").scrollIntoView({
+            block: "start",
+            inline: "nearest",
+            behavior: "smooth"
+          });
         });
-      });
+      }
     });
   } catch (e) {
     console.log(e);
@@ -439,13 +453,13 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     var _buttons10 = document.querySelectorAll(".faq__buttons button");
     if (window.innerWidth > 500) {
-      var elems = document.querySelectorAll(".faq__text p");
+      var _elems = document.querySelectorAll(".faq__text p");
       _buttons10.forEach(function (btn) {
         btn.addEventListener("click", function () {
           _buttons10.forEach(function (btn2) {
             return btn2.classList.remove('active');
           });
-          elems.forEach(function (el) {
+          _elems.forEach(function (el) {
             el.classList.remove('active');
             if (btn.dataset.id === el.dataset.id) {
               el.classList.add('active');
@@ -455,8 +469,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     } else {
-      var _elems = document.querySelectorAll(".faq__buttons__text");
-      _elems.forEach(function (el) {
+      var _elems2 = document.querySelectorAll(".faq__buttons__text");
+      _elems2.forEach(function (el) {
         el.dataset.height = el.offsetHeight;
         el.style.height = '0px';
         el.style.padding = '0px';
@@ -466,7 +480,7 @@ document.addEventListener("DOMContentLoaded", function () {
           _buttons10.forEach(function (btn2) {
             return btn2.classList.remove('active');
           });
-          _elems.forEach(function (el) {
+          _elems2.forEach(function (el) {
             el.style.height = '0px';
             el.classList.remove('active');
             if (btn.dataset.id === el.dataset.id) {
