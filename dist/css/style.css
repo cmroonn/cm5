@@ -5357,6 +5357,8 @@ a.basic-btn {
   cursor: pointer;
   outline: none;
   transition: 0.3s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 .swiper-button-prev-1 svg {
   width: 3.75vw;
@@ -5388,6 +5390,8 @@ a.basic-btn {
   cursor: pointer;
   outline: none;
   transition: 0.3s ease;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 .swiper-button-next-1 svg {
   width: 3.75vw;
