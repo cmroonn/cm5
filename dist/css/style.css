@@ -5486,6 +5486,8 @@ a.basic-btn {
     padding: 4.1666666667vw 15vw 4.1666666667vw 5.5555555556vw;
     border-top-left-radius: 2.7777777778vw;
     border-top-right-radius: 2.7777777778vw;
+    border-bottom-left-radius: 2.7777777778vw;
+    border-bottom-right-radius: 2.7777777778vw;
     position: relative;
   }
   .faq__buttons button svg {
@@ -5499,6 +5501,8 @@ a.basic-btn {
   }
   .faq__buttons button.active {
     margin-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .faq__buttons button.active svg {
     transform: rotate(180deg) translate(0, 36%);
@@ -7106,9 +7110,12 @@ a.basic-btn {
   margin-right: 1.25vw;
 }
 @media (max-width: 500px) {
+  .start__list {
+    padding: 0 11.1111111111vw;
+  }
   .start__list li {
     font-size: 4.4444444444vw;
-    width: 50vw;
+    width: 38.8888888889vw;
     flex-direction: column;
     text-align: center;
     margin-bottom: 9.4444444444vw;
