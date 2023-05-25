@@ -529,12 +529,14 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _btn4 = document.querySelector(".members__btn");
-    _btn4.addEventListener("click", function () {
-      document.querySelector(".start").scrollIntoView({
-        block: "start",
-        inline: "nearest",
-        behavior: "smooth"
+    var _buttons12 = document.querySelectorAll(".members__btn");
+    _buttons12.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        document.querySelector(".start").scrollIntoView({
+          block: "start",
+          inline: "nearest",
+          behavior: "smooth"
+        });
       });
     });
   } catch (e) {
