@@ -4361,6 +4361,7 @@ a.basic-btn {
   padding-right: 3.125vw;
   position: relative;
   margin-bottom: 3.75vw;
+  overflow: hidden;
 }
 .structure__item.structure__item-reverse {
   padding-left: 34.375vw;
@@ -4397,7 +4398,7 @@ a.basic-btn {
 }
 
 .structure__item__list {
-  max-width: 36.25vw;
+  max-width: 34.375vw;
 }
 .structure__item__list li {
   font-size: 1.25vw;
@@ -4424,13 +4425,13 @@ a.basic-btn {
   }
   .structure__item__list li {
     font-size: 4.4444444444vw;
-    margin-bottom: 4.1666666667vw;
+    margin-bottom: 2.7777777778vw;
   }
   .structure__item__list li:before {
     width: 5.5555555556vw;
     height: 5.5555555556vw;
     margin-right: 4.1666666667vw;
-    margin-top: 0.8333333333vw;
+    margin-top: 1.1111111111vw;
   }
 }
 
@@ -4447,7 +4448,7 @@ a.basic-btn {
     width: 100%;
     top: unset;
     height: auto;
-    right: -0.2777777778vw;
+    right: -0.8333333333vw;
     bottom: -1.1111111111vw;
   }
 }
@@ -4686,6 +4687,15 @@ a.basic-btn {
 @media (max-width: 500px) {
   .structure__benefits__pic {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .structure__item__list .pp span:first-child {
+    display: none;
+  }
+  .structure__item__list .pp span:last-child {
+    display: block !important;
   }
 }
 
