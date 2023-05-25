@@ -5206,7 +5206,8 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .program__link {
-    font-size: 3.2vw;
+    font-size: 4.4444444444vw;
+    margin-top: 0.8333333333vw;
   }
   .program__link img {
     width: 6.3888888889vw;
@@ -5221,7 +5222,9 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .program__show-btn {
-    margin: 2.7777777778vw auto 4.7222222222vw;
+    margin: 11.1111111111vw auto 4.7222222222vw;
+    width: 88.8888888889vw;
+    height: 19.4444444444vw;
   }
 }
 
