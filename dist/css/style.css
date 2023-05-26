@@ -355,7 +355,7 @@ a.basic-btn {
 }
 .base-checkbox span {
   position: relative;
-  padding-left: 26px;
+  padding-left: 1.625vw;
   color: rgba(37, 45, 77, 0.4);
   line-height: 130%;
 }
@@ -377,10 +377,26 @@ a.basic-btn {
   border: 1px solid rgb(232, 240, 252);
   background-repeat: no-repeat;
   background-position: center center;
-  border-radius: 4px;
+  border-radius: 0.1875vw;
 }
 .base-checkbox input:checked + span:before {
   background-image: url(../images/tick.svg);
+}
+@media (max-width: 500px) {
+  .base-checkbox {
+    font-size: 2.7777777778vw;
+    width: 83.3333333333vw;
+    margin: 0 0 4.1666666667vw;
+  }
+  .base-checkbox span {
+    padding-left: 8.3333333333vw;
+    line-height: 140%;
+  }
+  .base-checkbox span:before {
+    width: 5.5555555556vw;
+    height: 5.5555555556vw;
+    border-radius: 0.1875vw;
+  }
 }
 
 .welcome {
@@ -2248,11 +2264,10 @@ a.basic-btn {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
   top: 0;
   transform: translate(-50%, 0);
   left: 50%;
-  visibility: hidden;
   z-index: 1;
 }
 @media (max-width: 500px) {
@@ -2278,6 +2293,7 @@ a.basic-btn {
   opacity: 1;
   z-index: 1;
   visibility: visible;
+  transition: opacity 1.2s ease;
 }
 @media (max-width: 500px) {
   .services-2__content {
