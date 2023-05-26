@@ -536,23 +536,23 @@
 
                                 <path opacity="0.3" d="M119.241 225L59.1194 238.5V330.5H480.471V29.5L419.848 73L351.711 84L316.64 137L269.545 107L226.457 151.5L196.898 218.5L156.316 178L119.241 225Z" fill="url(#paint0_linear_1_328)"/>
                                 <path d="M59.1194 238.5L119.241 225L156.316 178L196.898 218.5L226.457 151.5L269.545 107L316.64 137L351.711 84L419.848 73L480.972 30.5" stroke="#F5265C" stroke-width="2"/>
-                                <ellipse cx="119.241" cy="225" rx="5.01012" ry="5" fill="#F5265C" data-dot="1"
+                                <circle cx="119.241" cy="225" r="5" fill="#F5265C" data-dot="1"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="156.316" cy="178" rx="5.01012" ry="5" fill="#F5265C" data-dot="2"
+                                <circle cx="156.316" cy="178" r="5" fill="#F5265C" data-dot="2"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="196.397" cy="218" rx="5.01012" ry="5" fill="#F5265C" data-dot="3"
+                                <circle cx="196.397" cy="218" r="5" fill="#F5265C" data-dot="3"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="226.458" cy="151" rx="5.01012" ry="5" fill="#F5265C" data-dot="4"
+                                <circle cx="226.458" cy="151" r="5" fill="#F5265C" data-dot="4"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="269.545" cy="107" rx="5.01012" ry="5" fill="#F5265C" data-dot="5"
+                                <circle cx="269.545" cy="107" r="5" fill="#F5265C" data-dot="5"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="316.64" cy="137" rx="5.01012" ry="5" fill="#F5265C" data-dot="6"
+                                <circle cx="316.64" cy="137" r="5" fill="#F5265C" data-dot="6"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="351.711" cy="84" rx="5.01012" ry="5" fill="#F5265C" data-dot="7"
+                                <circle cx="351.711" cy="84" r="5" fill="#F5265C" data-dot="7"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="419.848" cy="73" rx="5.01012" ry="5" fill="#F5265C" data-dot="8"
+                                <circle cx="419.848" cy="73" r="5" fill="#F5265C" data-dot="8"
                                          class="graphic-dot-2"/>
-                                <ellipse cx="479.97" cy="31" rx="5.01012" ry="5" fill="#F5265C" data-dot="9"
+                                <circle cx="479.97" cy="31" r="5" fill="#F5265C" data-dot="9"
                                          class="graphic-dot-2"/>
                                 <defs>
                                     <linearGradient id="paint0_linear_1_328" x1="311.129" y1="60.5" x2="338.075" y2="288.513" gradientUnits="userSpaceOnUse">
@@ -2570,7 +2570,7 @@
                             </span>
 
                             <span>
-                                Грамотный интернет-маркетолог может принести сотни тысяч рублей прибыли в месяц
+                                Грамотный интернет-маркетолог может принести сотни тысяч рублей прибыли в месяц.
                             </span>
                         </h3>
                     </div>
@@ -4098,14 +4098,25 @@
                                     <input type="tel" class="field required-field" name="phone" placeholder="Введите ваш телефон">
                                     <input type="email" class="field required-field" name="email" placeholder="Введите ваш e-mail">
 
+                                    <label class="base-checkbox">
+                                        <input type="checkbox" value="agree" name="policy" checked>
+
+                                        <span>
+                                            Я даю согласие на обработку персональных данных согласно
+                                            <a href="#" target="_blank">Политике конфиденциальности</a>
+                                            и принимаю условия
+                                            <a href="#" target="_blank">договора-оферты</a>
+                                        </span>
+                                    </label>
+
                                     <button type="submit" class="basic-btn popup-timer__form__fields__submit popup-basic__form__field__submit">
                                         Записаться на курс
                                     </button>
-                                    <span class="book__content__get__policy popup-timer__policy">
-                                        Нажимая на кнопку, вы соглашаетесь с
-                                        <a href="https://convertmonster.ru/agreement" target="_blank">“Политикой конфиденциальности”</a> и
-                                        <a href="#">“Пользовательским соглашением”</a>
-                                    </span>
+<!--                                    <span class="book__content__get__policy popup-timer__policy">-->
+<!--                                        Нажимая на кнопку, вы соглашаетесь с-->
+<!--                                        <a href="https://convertmonster.ru/agreement" target="_blank">“Политикой конфиденциальности”</a> и-->
+<!--                                        <a href="#">“Пользовательским соглашением”</a>-->
+<!--                                    </span>-->
                                 </div>
 
                             </form>
@@ -4150,7 +4161,7 @@
                         </div>
 
                         <button type="button" data-id="2">
-                            Будут ли мне помогать, если я не справляюсь с заданиями?
+                            Будут ли мне помогать, если я&nbsp;не&nbsp;справляюсь с заданиями?
 
                             <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 1L5.5 5L1 1" stroke="#0061F4" stroke-linecap="round"/>
@@ -4173,7 +4184,10 @@
 
 
                         <button type="button" data-id="3">
-                            Я не разбираюсь в интернет-маркетинге,<br>насколько сложнодля меня будет проходить обучение?
+                            Я не разбираюсь в интернет-маркетинге, <span style="display:inline-block">
+                            насколько сложно для меня будет проходить
+                            обучение?
+                        </span>
 
                             <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 1L5.5 5L1 1" stroke="#0061F4" stroke-linecap="round"/>
@@ -4211,7 +4225,8 @@
                         </div>
 
                         <button type="button" data-id="5">
-                            Кем я смогу работать после завершения курса? Какую зарплату могу получать, и когда я смогу трудоустроиться?
+                            Кем я смогу работать после завершения курса? Какую зарплату могу получать, и когда
+                            я&nbsp;смогу трудоустроиться?
 
                             <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10 1L5.5 5L1 1" stroke="#0061F4" stroke-linecap="round"/>
@@ -4237,7 +4252,8 @@
 
 
                         <button type="button" data-id="6">
-                            Сколько длится обучение и в каком формате проходит?
+                            Смогу ли я вернуть деньги,
+                            если&nbsp;мне не подойдет?
 
 
                             <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">

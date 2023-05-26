@@ -339,6 +339,50 @@ a.basic-btn {
   cursor: pointer;
 }
 
+.base-checkbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.625vw;
+  cursor: pointer;
+  margin: 0.4375vw 0 1.0625vw;
+}
+.base-checkbox input {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+.base-checkbox span {
+  position: relative;
+  padding-left: 26px;
+  color: rgba(37, 45, 77, 0.4);
+  line-height: 130%;
+}
+.base-checkbox span a {
+  color: rgba(37, 45, 77, 0.4);
+}
+.base-checkbox span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 1.25vw;
+  height: 1.25vw;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  background-color: white;
+  border: 1px solid rgb(232, 240, 252);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 4px;
+}
+.base-checkbox input:checked + span:before {
+  background-image: url(../images/tick.svg);
+}
+
 .welcome {
   max-width: 90vw;
   margin: auto;
@@ -2204,16 +2248,19 @@ a.basic-btn {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.6s ease;
   top: 0;
   transform: translate(-50%, 0);
   left: 50%;
+  visibility: hidden;
+  z-index: 1;
 }
 @media (max-width: 500px) {
   .services-2__content div span {
     font-size: 3.3333333333vw;
     padding: 1.3888888889vw 2.7777777778vw;
     max-width: 55.5555555556vw;
+    transition: opacity 1.2s ease;
   }
 }
 @media (max-width: 500px) {
@@ -2230,6 +2277,7 @@ a.basic-btn {
 .services-2__content div:hover span {
   opacity: 1;
   z-index: 1;
+  visibility: visible;
 }
 @media (max-width: 500px) {
   .services-2__content {
@@ -2766,10 +2814,11 @@ a.basic-btn {
   position: absolute;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.7s ease;
 }
 .demand__graphic__plate.active {
   opacity: 1;
+  transition: opacity 1.2s ease;
 }
 .demand__graphic__plate.demand__graphic__plate-1[data-dot="1"] {
   bottom: 7.125vw;
@@ -2798,6 +2847,28 @@ a.basic-btn {
 .demand__graphic__plate.demand__graphic__plate-1[data-dot="7"] {
   bottom: 21.8125vw;
   right: 0;
+}
+@media (max-width: 500px) {
+  .demand__graphic__plate.demand__graphic__plate-1[data-dot="3"] {
+    bottom: 17.5vw;
+    left: 20.2777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-1[data-dot="4"] {
+    bottom: 22.2222222222vw;
+    left: 22.2222222222vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-1[data-dot="5"] {
+    bottom: 30.5555555556vw;
+    left: 26.3888888889vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-1[data-dot="6"] {
+    bottom: 36.1111111111vw;
+    left: 27.7777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-1[data-dot="7"] {
+    bottom: 38.8888888889vw;
+    left: 30.5555555556vw;
+  }
 }
 .demand__graphic__plate.demand__graphic__plate-2[data-dot="1"] {
   bottom: 5.625vw;
@@ -2836,6 +2907,32 @@ a.basic-btn {
   right: 0;
 }
 @media (max-width: 500px) {
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="4"] {
+    bottom: 20.8333333333vw;
+    left: 27.7777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="5"] {
+    bottom: 25vw;
+    left: 27.7777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="6"] {
+    bottom: 23.6111111111vw;
+    left: 27.7777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="7"] {
+    bottom: 30.5555555556vw;
+    left: 27.7777777778vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="8"] {
+    bottom: 33.3333333333vw;
+    left: 33.3333333333vw;
+  }
+  .demand__graphic__plate.demand__graphic__plate-2[data-dot="9"] {
+    bottom: 41.6666666667vw;
+    left: 30.5555555556vw;
+  }
+}
+@media (max-width: 500px) {
   .demand__graphic__plate {
     font-size: 3.3333333333vw;
     padding: 2.7777777778vw 3.8888888889vw;
@@ -2856,8 +2953,7 @@ a.basic-btn {
 
 @media (max-width: 500px) {
   .graphic-dot-2 {
-    ry: 11;
-    rx: 11;
+    r: 11px;
   }
 }
 
@@ -5539,6 +5635,9 @@ a.basic-btn {
     border-bottom-right-radius: 2.7777777778vw;
     position: relative;
   }
+  .faq__buttons button span {
+    display: inline !important;
+  }
   .faq__buttons button svg {
     position: absolute;
     top: 50%;
@@ -6469,7 +6568,7 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .tarif__old-price {
-    font-size: 6.6666666667vw;
+    font-size: 7.2222222222vw;
   }
 }
 
