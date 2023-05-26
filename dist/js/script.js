@@ -471,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       var _elems2 = document.querySelectorAll(".faq__buttons__text");
       _elems2.forEach(function (el) {
-        el.dataset.height = el.offsetHeight;
+        el.dataset.height = Number(el.offsetHeight) + 15;
         el.style.height = '0px';
         el.style.padding = '0px';
       });
