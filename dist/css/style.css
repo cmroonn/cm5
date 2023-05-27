@@ -4562,7 +4562,7 @@ a.basic-btn {
 }
 @media (max-width: 500px) {
   .structure__item__pic {
-    width: 101%;
+    width: 105%;
     top: unset;
     height: auto;
     right: 0;
@@ -4570,8 +4570,8 @@ a.basic-btn {
     left: 0;
   }
   .structure__item__pic img {
-    width: 101%;
-    height: 101%;
+    width: 105%;
+    height: 105%;
     display: block;
   }
 }
