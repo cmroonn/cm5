@@ -4570,6 +4570,9 @@ a.basic-btn {
     left: 0;
   }
 }
+.structure__item__pic img {
+  width: 101%;
+}
 
 .structure__quote__pic {
   width: 9.375vw;
