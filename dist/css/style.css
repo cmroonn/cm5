@@ -4563,6 +4563,9 @@ a.basic-btn {
   height: 100%;
   border: none;
 }
+.structure__item__pic.structure__item__pic__mob {
+  display: none;
+}
 @media (max-width: 500px) {
   .structure__item__pic {
     width: 100%;
@@ -4570,11 +4573,14 @@ a.basic-btn {
     height: auto;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: unset;
   }
   .structure__item__pic img {
     width: 100%;
     height: 100%;
+    display: block;
+  }
+  .structure__item__pic.structure__item__pic__mob {
     display: block;
   }
 }
