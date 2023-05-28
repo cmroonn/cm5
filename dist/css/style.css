@@ -4497,7 +4497,7 @@ a.basic-btn {
     margin-bottom: 11.1111111111vw;
     height: unset;
     min-height: 175vw;
-    overflow: auto;
+    overflow: hidden;
   }
   .structure__item.structure__item-reverse {
     padding-left: 6.9444444444vw;
