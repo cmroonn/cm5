@@ -341,7 +341,36 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(e);
   }
   try {
-    var _swiper = new Swiper('.reviews__swiper', {
+    var $counter = document.querySelector(".video-review__counter");
+    var _swiper = new Swiper('.video-reviews__swiper', {
+      speed: 400,
+      spaceBetween: 20,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      navigation: {
+        nextEl: '.video-review__next',
+        prevEl: '.video-review__prev'
+      },
+      breakpoints: {
+        501: {
+          slidesPerView: 4
+        }
+      },
+      on: {
+        init: function init() {
+          console.log(this);
+          $counter.innerHTML = "".concat(this.snapIndex + 1, " \u0438\u0437 ").concat(this.slides.length);
+        },
+        slideChange: function slideChange() {
+          $counter.innerHTML = "".concat(this.snapIndex + 1, " \u0438\u0437 ").concat(this.slides.length);
+        }
+      }
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var _swiper2 = new Swiper('.reviews__swiper', {
       slidesPerView: 1,
       slidesPerGroup: 1,
       breakpoints: {
@@ -537,6 +566,21 @@ document.addEventListener("DOMContentLoaded", function () {
           inline: "nearest",
           behavior: "smooth"
         });
+      });
+    });
+  } catch (e) {
+    console.log(e);
+  }
+  try {
+    var slides = document.querySelectorAll(".video-reviews__swiper .swiper-slide");
+    slides.forEach(function (el) {
+      el.addEventListener("click", function () {
+        var vid = el.querySelector("video");
+        if (vid.paused) {
+          vid.play();
+        } else {
+          vid.pause();
+        }
       });
     });
   } catch (e) {

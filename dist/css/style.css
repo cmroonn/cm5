@@ -399,6 +399,131 @@ a.basic-btn {
   }
 }
 
+.video-reviews__swiper {
+  padding-bottom: 6.25vw;
+}
+.video-reviews__swiper .swiper-slide {
+  position: relative;
+  cursor: pointer;
+}
+.video-reviews__swiper .swiper-slide:hover .video-reviews__plate {
+  color: rgb(0, 97, 244);
+}
+.video-reviews__swiper video {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+  border-radius: 0.625vw;
+}
+@media (max-width: 500px) {
+  .video-reviews__swiper {
+    padding-bottom: 27.7777777778vw;
+    max-width: 72.2222222222vw;
+  }
+  .video-reviews__swiper video {
+    height: 111.1111111111vw;
+    border-radius: 2.7777777778vw;
+  }
+}
+
+.video-reviews__plate {
+  background-color: #fff;
+  padding: 0.9375vw 2.1875vw;
+  border-radius: 0.625vw;
+  position: absolute;
+  bottom: 1.25vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-weight: 700;
+  width: max-content;
+  font-size: 1vw;
+}
+@media (max-width: 500px) {
+  .video-reviews__plate {
+    font-size: 4.4444444444vw;
+    bottom: 5.5555555556vw;
+    padding: 4.1666666667vw 9.7222222222vw;
+    border-radius: 2.7777777778vw;
+  }
+}
+
+.video-review__prev {
+  position: absolute;
+  bottom: 0;
+  left: 29.375vw;
+  cursor: pointer;
+}
+.video-review__prev.swiper-button-disabled rect {
+  fill: #DFDFDF;
+}
+@media (max-width: 500px) {
+  .video-review__prev {
+    left: 18.0555555556vw;
+  }
+}
+
+.video-review__next {
+  position: absolute;
+  bottom: 0;
+  right: 29.375vw;
+  cursor: pointer;
+}
+.video-review__next.swiper-button-disabled rect {
+  fill: #DFDFDF;
+}
+@media (max-width: 500px) {
+  .video-review__next {
+    right: 18.0555555556vw;
+  }
+}
+
+.video-reviews__title {
+  margin-bottom: 3.75vw;
+}
+@media (max-width: 500px) {
+  .video-reviews__title {
+    margin-bottom: 5.5555555556vw;
+  }
+}
+
+.video-reviews {
+  margin: 6.25vw 0;
+}
+@media (max-width: 500px) {
+  .video-reviews {
+    margin: 27.7777777778vw 0;
+  }
+}
+
+.video-review__counter {
+  position: absolute;
+  bottom: 1.5625vw;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: rgb(142, 158, 188);
+}
+@media (max-width: 500px) {
+  .video-review__counter {
+    display: none;
+  }
+}
+
+.video-reviews__desc {
+  text-align: center;
+  display: none;
+}
+@media (max-width: 500px) {
+  .video-reviews__desc {
+    margin-bottom: 8.3333333333vw;
+    color: rgb(143, 160, 189);
+    font-size: 3.8888888889vw;
+    display: block;
+    max-width: 45.8333333333vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .welcome {
   max-width: 90vw;
   margin: auto;
