@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "../fonts/RF Dewi/stylesheet.css";
 body {
   padding: 0;
@@ -739,7 +740,7 @@ a.basic-btn {
   margin-bottom: 1.375vw;
 }
 .welcome__offer__title:after {
-  content: "2023";
+  content: "с нуля до middle";
   position: absolute;
   top: 0;
   padding: 0.5vw 1.875vw 0.75vw;
@@ -997,6 +998,20 @@ a.basic-btn {
   }
 }
 
+.welcome__offer__title-4 {
+  margin-bottom: 4.6875vw;
+}
+.welcome__offer__title-4:after {
+  font-size: 2.25vw;
+  left: 0;
+  right: unset;
+  top: unset;
+  bottom: -2.5vw;
+  margin-left: 0;
+  padding: 0.5vw 1.25vw;
+  text-align: center;
+}
+
 .welcome__offer__title-3 {
   font-style: normal;
   font-size: 6.25vw;
@@ -1121,6 +1136,7 @@ a.basic-btn {
 }
 .welcome-4 .welcome__offer__desc {
   max-width: 28.125vw;
+  font-size: 1.25vw;
 }
 .welcome-4 .welcome__offer__guide {
   padding: 1.5625vw 1.875vw 2.0625vw;
@@ -6639,7 +6655,7 @@ a.basic-btn {
   border-radius: 1.25vw;
   width: 18.75vw;
   position: relative;
-  height: 70.625vw;
+  height: 68.125vw;
   display: flex;
   flex-direction: column;
 }
@@ -8226,4 +8242,15 @@ a.basic-btn {
 
 .popup-timer__list {
   font-size: 1vw;
+}
+
+.popup-video iframe {
+  width: 47.3684210526vh;
+  height: calc(100vh - 80px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.625vw;
+  overflow: hidden;
 }

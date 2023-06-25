@@ -48,7 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function closePopup() {
     main.classList.remove('blur');
     document.querySelectorAll(".overlay").forEach(function (popup) {
-      return popup.classList.remove('active');
+      popup.classList.remove('active');
+      if (popup.querySelector("iframe")) {
+        popup.querySelector("iframe").contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+      }
     });
     isOpenPopup = false;
     document.body.removeAttribute('style');
@@ -576,10 +579,12 @@ document.addEventListener("DOMContentLoaded", function () {
     slides.forEach(function (el) {
       el.addEventListener("click", function () {
         var vid = el.querySelector("video");
-        if (vid.paused) {
-          vid.play();
-        } else {
-          vid.pause();
+        if (window.innerWidth < 500) {
+          if (vid.paused) {
+            vid.play();
+          } else {
+            vid.pause();
+          }
         }
       });
     });
