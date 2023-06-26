@@ -1011,6 +1011,18 @@ a.basic-btn {
   padding: 0.5vw 1.25vw;
   text-align: center;
 }
+@media (max-width: 500px) {
+  .welcome__offer__title-4:after {
+    left: 50%;
+    transform: translate(-50%, 0) rotate(-3.76deg);
+    font-size: 6.6666666667vw;
+    bottom: -22.2222222222vw;
+    padding: 1.3888888889vw 4.1666666667vw;
+    margin-bottom: 13.8888888889vw;
+    width: 69.4444444444vw;
+    height: unset;
+  }
+}
 
 .welcome__offer__title-3 {
   font-style: normal;
@@ -1199,6 +1211,7 @@ a.basic-btn {
   }
   .welcome-4 .welcome__offer__desc {
     max-width: unset;
+    font-size: 4.4444444444vw;
   }
   .welcome-4 .welcome__offer__guide__desc {
     display: flex;
