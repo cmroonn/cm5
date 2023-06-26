@@ -525,6 +525,10 @@ a.basic-btn {
   }
 }
 
+.swiper-button-lock {
+  display: block !important;
+}
+
 .welcome {
   max-width: 90vw;
   margin: auto;

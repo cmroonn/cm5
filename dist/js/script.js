@@ -362,10 +362,10 @@ document.addEventListener("DOMContentLoaded", function () {
       on: {
         init: function init() {
           console.log(this);
-          $counter.innerHTML = "".concat(this.snapIndex + 1, " \u0438\u0437 ").concat(this.slides.length);
+          $counter.innerHTML = "".concat(this.snapIndex + 4, " \u0438\u0437 ").concat(this.slides.length);
         },
         slideChange: function slideChange() {
-          $counter.innerHTML = "".concat(this.snapIndex + 1, " \u0438\u0437 ").concat(this.slides.length);
+          $counter.innerHTML = "".concat(this.snapIndex + 4, " \u0438\u0437 ").concat(this.slides.length);
         }
       }
     });
