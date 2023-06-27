@@ -502,6 +502,8 @@ a.basic-btn {
   left: 50%;
   transform: translate(-50%, 0);
   color: rgb(142, 158, 188);
+  display: block;
+  width: unset;
 }
 @media (max-width: 500px) {
   .video-review__counter {
@@ -4667,6 +4669,9 @@ a.basic-btn {
   right: unset;
   left: 0;
 }
+.structure__item:last-child .structure__item__pic {
+  width: 42.5vw;
+}
 @media (max-width: 500px) {
   .structure__item {
     padding-top: 11.1111111111vw;
@@ -4677,6 +4682,9 @@ a.basic-btn {
     height: unset;
     min-height: 175vw;
     overflow: visible;
+  }
+  .structure__item:last-child .structure__item__pic {
+    width: auto;
   }
   .structure__item.structure__item-reverse {
     padding-left: 6.9444444444vw;
@@ -5175,6 +5183,17 @@ a.basic-btn {
 
 .marquee-word {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.services-price__title {
+  max-width: 56.25vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 500px) {
+  .services-price__title {
+    max-width: unset;
+  }
 }
 
 .instrument {

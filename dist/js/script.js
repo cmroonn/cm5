@@ -354,20 +354,28 @@ document.addEventListener("DOMContentLoaded", function () {
         nextEl: '.video-review__next',
         prevEl: '.video-review__prev'
       },
+      pagination: {
+        el: ".video-review__counter",
+        type: "fraction",
+        renderFraction: function renderFraction(currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + ' из ' + '<span class="' + totalClass + '"></span>';
+        }
+      },
       breakpoints: {
         501: {
           slidesPerView: 4
         }
-      },
-      on: {
-        init: function init() {
-          console.log(this);
-          $counter.innerHTML = "".concat(this.snapIndex + 4, " \u0438\u0437 ").concat(this.slides.length);
-        },
-        slideChange: function slideChange() {
-          $counter.innerHTML = "".concat(this.snapIndex + 4, " \u0438\u0437 ").concat(this.slides.length);
-        }
       }
+
+      // on: {
+      //     init: function(){
+      //         console.log(this);
+      //         $counter.innerHTML = `${this.snapIndex + 4} из ${this.slides.length / 4}`
+      //     },
+      //     slideChange: function(){
+      //         $counter.innerHTML = `${this.snapIndex + 4} из ${this.slides.length}`
+      //     }
+      // }
     });
   } catch (e) {
     console.log(e);
