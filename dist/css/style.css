@@ -2426,8 +2426,10 @@ a.basic-btn {
 .services-2__content div {
   position: relative;
 }
-.services-2__content div:last-child {
-  display: none;
+@media (max-width: 500px) {
+  .services-2__content div:last-child {
+    display: none;
+  }
 }
 .services-2__content div span {
   font-size: 0.875vw;
